@@ -1,4 +1,4 @@
-package com.kkpa.datasctructures.arrays;
+package com.kkpa.hackerrank.datasctructures.arrays;
 
 import java.util.ArrayList;
 import java.util.List;

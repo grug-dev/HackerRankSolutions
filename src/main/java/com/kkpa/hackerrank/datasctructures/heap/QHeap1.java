@@ -1,4 +1,4 @@
-package com.kkpa.datasctructures.heap;
+package com.kkpa.hackerrank.datasctructures.heap;
 
 import java.util.PriorityQueue;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.kkpa.crackingcodinginterview;
+package com.kkpa.hackerrank.crackingcodinginterview;
 
 import java.util.Arrays;
 import java.util.Map;

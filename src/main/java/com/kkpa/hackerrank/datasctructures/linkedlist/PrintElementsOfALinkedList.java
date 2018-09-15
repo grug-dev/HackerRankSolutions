@@ -1,4 +1,4 @@
-package com.kkpa.datasctructures.linkedlist;
+package com.kkpa.hackerrank.datasctructures.linkedlist;
 
 import java.util.Scanner;
 

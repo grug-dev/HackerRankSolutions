@@ -1,4 +1,4 @@
-package com.kkpa.datasctructures.arrayList;
+package com.kkpa.hackerrank.datasctructures.arrayList;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,9 +1,9 @@
-package com.kkpa.crackingcodinginterview;
+package com.kkpa.hackerrank.crackingcodinginterview;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class DetectACycle {
+public class DetectACycleC {
 
     static class Node {
 	int data;
