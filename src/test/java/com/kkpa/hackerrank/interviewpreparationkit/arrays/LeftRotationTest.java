@@ -27,9 +27,13 @@ public class LeftRotationTest extends AbstractJunitTest {
 
   @Parameters
   public static Collection<Object[]> data() {
-    return Arrays.asList(new Object[][] {{new int[] {1, 2, 3, 4, 5}, 4, new int[] {5, 1, 2, 3, 4}},
-        {new int[] {1, 2, 3, 4, 5}, 11, new int[] {2, 3, 4, 5, 1}},
-        {new int[] {1, 2, 3, 4, 5}, 5, new int[] {1, 2, 3, 4, 5}}});
+    return Arrays.asList(
+      new Object[][] {
+        { new int[] {1, 2, 3, 4, 5}, 4, new int[] {5, 1, 2, 3, 4}},
+        { new int[] {1, 2, 3, 4, 5}, 11, new int[] {2, 3, 4, 5, 1}},
+        { new int[] {1, 2, 3, 4, 5}, 5, new int[] {1, 2, 3, 4, 5}}
+      }
+      );
   }
 
 
