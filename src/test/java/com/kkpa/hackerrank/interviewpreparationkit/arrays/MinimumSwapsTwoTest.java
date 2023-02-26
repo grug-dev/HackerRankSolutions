@@ -10,21 +10,23 @@ import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * https://www.hackerrank.com/challenges/minimum-swaps-2/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
+ */
 @RunWith(Parameterized.class)
-public class NewYearChaosTest extends AbstractJunitTest {
+public class MinimumSwapsTwoTest extends AbstractJunitTest {
 
   @Parameter(0)
-  public int numPeopleOnQueue;
+  public int n;
 
   @Parameter(1)
-  public int[] finalStateOnQueue;
+  public int[] customARray;
 
   @Parameter(2)
-  public String expected;
+  public int expected;
 
   @Before
   public void setUp() throws Exception {
@@ -32,15 +34,16 @@ public class NewYearChaosTest extends AbstractJunitTest {
 
   @Parameters
   public static List<Object> data() {
-    return Arrays.asList(new Object[][]{{5, new int[]{2, 1, 5, 3, 4}, "3"},
-            {5, new int[]{2, 5, 1, 3, 4}, "Too chaotic"},
-            {5, new int[]{2, 1, 5, 4, 3}, "4"},
-            {8, new int[]{1, 2, 5, 3, 4, 7, 8, 6}, "4"}});
+    return Arrays.asList(new Object[][]{
+            {4, new int[]{4, 3, 1, 2}, 3},
+            {5, new int[]{2, 3, 4, 1, 5}, 3},
+            {7, new int[]{1, 3, 5, 2, 4, 6, 7}, 3},
+    });
   }
 
   @Test
   public void testMinimumBribes() {
-    String result = newYearChaos.minimumBribes(java.util.Arrays.stream(finalStateOnQueue).boxed().collect(Collectors.toList()));
+    int result = minimumSwapsTwo.minimumSwaps(customARray);
 
     assertEquals(expected, result);
 

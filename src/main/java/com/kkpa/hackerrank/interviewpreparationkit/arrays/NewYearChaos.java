@@ -1,45 +1,55 @@
 package com.kkpa.hackerrank.interviewpreparationkit.arrays;
 
-import java.util.HashMap;
-import java.util.Map;
 import org.springframework.stereotype.Component;
+
+import java.util.Collections;
+import java.util.List;
 
 @Component
 public class NewYearChaos {
 
   // Complete the minimumBribes function below.
-  public String minimumBribes(int[] q) {
-    final String TOO_CHAOTIC = "Too chaotic";
-    Map<Integer, Integer> mapQueue = new HashMap<>();
+  public String minimumBribes(List<Integer> q) {
+    //System.out.println(q);
+
+    int totalBribes = 0;
+    for (int i = q.size(); i > 0; i--) {
 
 
-    int expectedValue = 1;
-    int bribes = 0;
-    boolean isCorrect = false;
+      Integer curr = q.get(i - 1);
 
-    for (int index = 1; index <= q.length; index++) {
-      isCorrect = false;
-      while (!isCorrect) {
-        int sticker = mapQueue.getOrDefault(index, q[index - 1]);
-        expectedValue = index;
-        int tmpBribes = Math.abs(expectedValue - sticker);
-        if (tmpBribes == 0) {
-          isCorrect = true;
-          continue;
-        }
-        if (tmpBribes > 2) {
-          return TOO_CHAOTIC;
-        }
-        bribes += tmpBribes;
-        int tmpIndex = index;
-        while (tmpBribes > 0) {
-          mapQueue.put(tmpIndex, mapQueue.getOrDefault(tmpIndex + 1, q[tmpIndex]));
-          mapQueue.put(++tmpIndex, sticker);
-          tmpBribes--;
-        }
+      if (i == curr) {
+
+        continue;
+
       }
+      if (i == q.get(i - 2)) {
+
+        Collections.swap(q, i - 1, i - 2);
+        //System.out.println(q);
+        totalBribes++;
+        continue;
+
+
+      }
+
+
+      if (i == q.get(i - 3)) {
+
+        Collections.swap(q, i - 3, i - 2);
+        //System.out.println(q);
+        totalBribes++;
+        Collections.swap(q, i - 2, i - 1);
+        //System.out.println(q);
+        totalBribes++;
+        continue;
+      }
+
+
+      return ("Too chaotic");
     }
-    return String.valueOf(bribes);
+
+    return "" + totalBribes;
   }
 
 }

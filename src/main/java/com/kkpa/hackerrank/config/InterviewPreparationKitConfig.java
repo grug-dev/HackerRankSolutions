@@ -1,6 +1,7 @@
 package com.kkpa.hackerrank.config;
 
 import com.kkpa.hackerrank.interviewpreparationkit.arrays.LeftRotation;
+import com.kkpa.hackerrank.interviewpreparationkit.arrays.MinimumSwapsTwo;
 import com.kkpa.hackerrank.interviewpreparationkit.arrays.NewYearChaos;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,5 +19,9 @@ public class InterviewPreparationKitConfig {
     return new NewYearChaos();
   }
 
+  @Bean
+  public MinimumSwapsTwo minimumSwapsTwoBean() {
+    return new MinimumSwapsTwo();
+  }
 
 }

@@ -2,6 +2,7 @@ package com.kkpa.hackerrank;
 
 import com.kkpa.hackerrank.config.InterviewPreparationKitConfig;
 import com.kkpa.hackerrank.interviewpreparationkit.arrays.LeftRotation;
+import com.kkpa.hackerrank.interviewpreparationkit.arrays.MinimumSwapsTwo;
 import com.kkpa.hackerrank.interviewpreparationkit.arrays.NewYearChaos;
 import org.junit.Before;
 import org.springframework.test.context.ContextConfiguration;
@@ -14,6 +15,7 @@ public abstract class AbstractJunitTest extends AbstractJUnit4SpringContextTests
   private static TestContextManager testContextManager = null;
   protected static LeftRotation leftRotation;
   protected static NewYearChaos newYearChaos;
+  protected static MinimumSwapsTwo minimumSwapsTwo;
 
   @Before
   public void initApplicationContext() throws Exception {
@@ -22,6 +24,7 @@ public abstract class AbstractJunitTest extends AbstractJUnit4SpringContextTests
       testContextManager.prepareTestInstance(this);
       leftRotation = applicationContext.getBean(LeftRotation.class);
       newYearChaos = applicationContext.getBean(NewYearChaos.class);
+      minimumSwapsTwo = applicationContext.getBean(MinimumSwapsTwo.class);
     }
   }
 
