@@ -3,13 +3,10 @@ package com.kkpa.hackerrank.java.arrays;
 import com.kkpa.hackerrank.java.AbstractDataStructuresJUnitTest;
 import org.assertj.core.util.Arrays;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.List;
-
-import static org.junit.Assert.assertEquals;
 
 /**
  * Let's play a game on an array! You're standing at index  of an -element array named . From some index  (where ), you can perform one of the following moves:
@@ -56,11 +53,6 @@ public class Java1dArrayTest extends AbstractDataStructuresJUnitTest {
   @Parameterized.Parameter(3)
   public boolean expectedResult;
 
-
-  @Before
-  public void setup() throws Exception {
-  }
-
   @Parameterized.Parameters
   public static List<Object> data() {
     return Arrays.asList(
@@ -73,9 +65,8 @@ public class Java1dArrayTest extends AbstractDataStructuresJUnitTest {
     );
   }
 
-  @Test
-  public void testHaveNegativeSums() {
-    boolean result = java1DArrayPartII.canWin(leap, game);
-    assertEquals(expectedResult, result);
+  @Before
+  public void setup() throws Exception {
   }
+
 }

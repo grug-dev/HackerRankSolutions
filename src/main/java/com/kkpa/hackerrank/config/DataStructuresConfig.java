@@ -1,7 +1,6 @@
 package com.kkpa.hackerrank.config;
 
 import com.kkpa.hackerrank.datasctructures.arrayList.JavaList;
-import com.kkpa.hackerrank.datasctructures.arrays.Java1DArrayPartII;
 import com.kkpa.hackerrank.datasctructures.arrays.JavaHashSet;
 import com.kkpa.hackerrank.datasctructures.arrays.JavaSubArray;
 import org.springframework.context.annotation.Bean;
@@ -19,11 +18,7 @@ public class DataStructuresConfig {
   public JavaList javaListBean() {
     return new JavaList();
   }
-
-  @Bean
-  public Java1DArrayPartII java1DArrayPartIIBean() {
-    return new Java1DArrayPartII();
-  }
+  
 
   @Bean
   public JavaHashSet javaHashSetBean() {

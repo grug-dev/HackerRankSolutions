@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.interviewpreparationkit.arrays;
 
-import com.kkpa.hackerrank.AbstractJunitTest;
+import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
 import org.assertj.core.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class NewYearChaosTest extends AbstractJunitTest {
+public class NewYearChaosTest extends AbstractInterviewPreparationKitConfigTest {
 
   @Parameter(0)
   public int numPeopleOnQueue;
