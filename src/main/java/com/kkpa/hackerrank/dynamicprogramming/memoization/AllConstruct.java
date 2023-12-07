@@ -1,4 +1,4 @@
-package com.kkpa.hackerrank.dynamicprogramming;
+package com.kkpa.hackerrank.dynamicprogramming.memoization;
 
 import java.util.ArrayList;
 import java.util.Arrays;
