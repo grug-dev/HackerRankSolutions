@@ -24,7 +24,6 @@ public class DoublyLinkedListNodeSolution {
     DoublyLinkedListNode currentNode = llist;
     DoublyLinkedListNode newNode = new DoublyLinkedListNode(data);
 
-    boolean added = false;
     do {
       if (currentNode.data > data) {
         newNode.prev = currentNode.prev;
@@ -35,24 +34,19 @@ public class DoublyLinkedListNodeSolution {
         } else {
           currentNode.prev = newNode;
         }
-        added = true;
+        break;
+      }
+      // Adding to the last position
+      if (currentNode.next == null) {
+        currentNode.next = newNode;
+        currentNode.next.prev = currentNode;
         break;
       }
       currentNode = currentNode.next;
     } while (currentNode != null);
 
-    if (currentNode == null && !added) {
-      currentNode = llist;
-      while (currentNode.next != null) {
-        currentNode = currentNode.next;
-        if (currentNode.next == null) {
-          currentNode.next = newNode;
-          currentNode.next.prev = currentNode;
-          break;
-        }
-      }
-    }
 
+    // Pointing out to the head.
     DoublyLinkedListNode result = currentNode;
     while (result.prev != null) {
       result = result.prev;
