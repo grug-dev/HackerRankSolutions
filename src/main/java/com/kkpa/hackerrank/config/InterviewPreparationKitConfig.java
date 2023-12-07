@@ -6,6 +6,7 @@ import com.kkpa.hackerrank.interviewpreparationkit.arrays.MinimumSwapsTwo;
 import com.kkpa.hackerrank.interviewpreparationkit.arrays.NewYearChaos;
 import com.kkpa.hackerrank.interviewpreparationkit.dictionarieshasmaps.CountTriplets;
 import com.kkpa.hackerrank.interviewpreparationkit.dictionarieshasmaps.SherlockAnagrams;
+import com.kkpa.hackerrank.interviewpreparationkit.linkedlist.DoublyLinkedListNodeSolution;
 import com.kkpa.hackerrank.interviewpreparationkit.search.SearchTriplets;
 import com.kkpa.hackerrank.interviewpreparationkit.search.SwapNodes;
 import com.kkpa.hackerrank.interviewpreparationkit.stringmanipulation.AlternativeCharacteres;
@@ -72,4 +73,8 @@ public class InterviewPreparationKitConfig {
     return new MaxArraySum();
   }
 
+  @Bean
+  protected DoublyLinkedListNodeSolution doublyLinkedListNode() {
+    return new DoublyLinkedListNodeSolution();
+  }
 }

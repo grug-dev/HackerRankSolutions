@@ -7,6 +7,7 @@ import com.kkpa.hackerrank.interviewpreparationkit.arrays.MinimumSwapsTwo;
 import com.kkpa.hackerrank.interviewpreparationkit.arrays.NewYearChaos;
 import com.kkpa.hackerrank.interviewpreparationkit.dictionarieshasmaps.CountTriplets;
 import com.kkpa.hackerrank.interviewpreparationkit.dictionarieshasmaps.SherlockAnagrams;
+import com.kkpa.hackerrank.interviewpreparationkit.linkedlist.DoublyLinkedListNodeSolution;
 import com.kkpa.hackerrank.interviewpreparationkit.search.SearchTriplets;
 import com.kkpa.hackerrank.interviewpreparationkit.search.SwapNodes;
 import com.kkpa.hackerrank.interviewpreparationkit.stringmanipulation.AlternativeCharacteres;
@@ -36,6 +37,8 @@ public abstract class AbstractInterviewPreparationKitConfigTest extends Abstract
 
   protected static MaxArraySum maxArraySum;
 
+  protected static DoublyLinkedListNodeSolution doublyLinkedListNode;
+
   @Before
   public void initApplicationContext() throws Exception {
     if (testContextManager == null) {
@@ -52,6 +55,7 @@ public abstract class AbstractInterviewPreparationKitConfigTest extends Abstract
       swapNodes = applicationContext.getBean(SwapNodes.class);
       searchTriplets = applicationContext.getBean(SearchTriplets.class);
       maxArraySum = applicationContext.getBean(MaxArraySum.class);
+      doublyLinkedListNode = applicationContext.getBean(DoublyLinkedListNodeSolution.class);
     }
   }
 
