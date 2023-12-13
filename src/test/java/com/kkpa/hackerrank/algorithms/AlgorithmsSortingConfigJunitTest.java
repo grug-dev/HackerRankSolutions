@@ -1,5 +1,6 @@
 package com.kkpa.hackerrank.algorithms;
 
+import com.kkpa.hackerrank.algorithms.dynamicprogramming.SamAndSubstrings;
 import com.kkpa.hackerrank.algorithms.sorting.Insertion_Sort_Part1;
 import com.kkpa.hackerrank.config.AlgorithmsConfig;
 import org.junit.Before;
@@ -13,6 +14,7 @@ public class AlgorithmsSortingConfigJunitTest extends AbstractJUnit4SpringContex
   private static TestContextManager testContextManager = null;
 
   protected static Insertion_Sort_Part1 insertionSortPart1;
+  protected static SamAndSubstrings samAndSubstrings;
 
   @Before
   public void initApplicationContext() throws Exception {
@@ -20,6 +22,7 @@ public class AlgorithmsSortingConfigJunitTest extends AbstractJUnit4SpringContex
       testContextManager = new TestContextManager(getClass());
       testContextManager.prepareTestInstance(this);
       insertionSortPart1 = applicationContext.getBean(Insertion_Sort_Part1.class);
+      samAndSubstrings = applicationContext.getBean(SamAndSubstrings.class);
     }
   }
 

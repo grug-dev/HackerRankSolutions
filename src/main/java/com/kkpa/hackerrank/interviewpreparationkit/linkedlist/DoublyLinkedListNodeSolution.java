@@ -16,12 +16,11 @@ public class DoublyLinkedListNodeSolution {
 
 
   /**
-   * @param llist DoublyLinkedListNode pointer head: a reference to the head of a doubly-linked list
-   * @param data  An integer denoting the value of the  field for the DoublyLinkedListNode you must insert into the list
+   * @param head DoublyLinkedListNode pointer head: a reference to the head of a doubly-linked list
+   * @param data An integer denoting the value of the  field for the DoublyLinkedListNode you must insert into the list
    * @return DoublyLinkedListNode pointer head.
    */
-  public DoublyLinkedListNode sortedInsert(DoublyLinkedListNode llist, int data) {
-    DoublyLinkedListNode currentNode = llist;
+  public DoublyLinkedListNode sortedInsert(DoublyLinkedListNode currentNode, int data) {
     DoublyLinkedListNode newNode = new DoublyLinkedListNode(data);
 
     do {
