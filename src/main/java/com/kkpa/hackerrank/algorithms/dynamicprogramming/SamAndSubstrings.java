@@ -89,11 +89,19 @@ public class SamAndSubstrings {
 
   private long df(String value, long modulo) {
     long sum = 0;
+    long currentNumber = 0;
     int size = value.length();
+
     for (int x = 0; x < size; x++) {
       String subNumber = value.substring(x);
-      sum += Long.parseLong(subNumber);
+      sum += Long.parseLong(subNumber) % modulo;
     }
+
+
     return sum;
   }
+
 }
+
+
+
