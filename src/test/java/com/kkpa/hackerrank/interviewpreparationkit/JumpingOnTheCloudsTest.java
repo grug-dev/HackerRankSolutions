@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.interviewpreparationkit;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
+import com.kkpa.hackerrank.interviewpreparationkit.warmup.JumpingOnTheClouds;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -12,7 +12,9 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class JumpingOnTheCloudsTest extends AbstractInterviewPreparationKitConfigTest {
+public class JumpingOnTheCloudsTest {
+
+  private final JumpingOnTheClouds jumpingOnTheClouds = new JumpingOnTheClouds();
 
   @Parameterized.Parameter
   public List<Integer> data;

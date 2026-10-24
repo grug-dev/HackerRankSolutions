@@ -34,15 +34,8 @@ public class CanSum {
     return result;
   }
 
-  private static boolean canSum(long targetSum, int[] numbers) {
+  static boolean canSum(long targetSum, int[] numbers) {
     return canSum(targetSum, numbers, new HashMap<>());
-  }
-
-  public static void main(String[] args) {
-    System.out.println(" true " + canSum(7, new int[]{2, 3}));
-    System.out.println(" true " + canSum(7, new int[]{5, 3, 4, 7}));
-    System.out.println(" false " + canSum(7, new int[]{2, 4}));
-    System.out.println(" false " + canSum(300, new int[]{7, 14}));
   }
 
 }

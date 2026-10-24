@@ -1,40 +1,35 @@
 package com.kkpa.hackerrank.crackingcodinginterview;
 
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.stream.Collectors;
 
+/**
+ * https://www.hackerrank.com/challenges/ctci-making-anagrams/problem
+ * <p>
+ * Find the minimum number of character deletions needed to make two strings anagrams.
+ * Constraints: 1 <= |a|, |b| <= 10^4, and both strings contain only lowercase letters a-z.
+ */
 public class MakingAnagrams {
 
-  private static final Scanner scanner = new Scanner(System.in);
+  private static final int ALPHABET_SIZE = 26;
 
-  private static void makeAnagrams(String firstWord, String secondWord) {
+  /**
+   * @param a first string, lowercase letters only
+   * @param b second string, lowercase letters only
+   * @return how many characters must be deleted from a and b so both have the same letter counts
+   */
+  public static int makeAnagram(String a, String b) {
+    // count[i] > 0: letter i appears more in a. count[i] < 0: it appears more in b.
+    int[] count = new int[ALPHABET_SIZE];
+    for (char c : a.toCharArray()) {
+      count[c - 'a']++;
+    }
+    for (char c : b.toCharArray()) {
+      count[c - 'a']--;
+    }
 
-    Map<String, Long> mapFirstWord = Arrays.stream(firstWord.split(""))
-            .collect(Collectors.groupingBy(s -> s, Collectors.counting()));
-
-    Map<String, Long> mapSecondWord = Arrays.stream(secondWord.split(""))
-            .collect(Collectors.groupingBy(s -> s, Collectors.counting()));
-
-    mapSecondWord.forEach((key, value) -> {
-      mapFirstWord.merge(key, value, (a, b) -> a - b);
-    });
-
-    System.out.println(mapFirstWord.values().stream().reduce((a, b) -> {
-      return Math.abs(a) + Math.abs(b);
-    }).orElse(0l));
+    int deletions = 0;
+    for (int difference : count) {
+      deletions += Math.abs(difference);
+    }
+    return deletions;
   }
-
-  public static void main(String[] args) {
-    String a = scanner.nextLine();
-
-    String b = scanner.nextLine();
-
-    scanner.close();
-
-    makeAnagrams(a, b);
-
-  }
-
 }

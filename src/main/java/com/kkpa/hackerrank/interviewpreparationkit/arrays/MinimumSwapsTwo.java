@@ -1,17 +1,15 @@
 package com.kkpa.hackerrank.interviewpreparationkit.arrays;
 
-import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
 public class MinimumSwapsTwo {
 
   // Complete the minimumSwaps function below.
-  public int minimumSwaps(int[] arr) {
+  public int minimumSwapsCollection(int[] arr) {
     List<Integer> unorderInitial = Arrays.stream(arr).boxed().collect(Collectors.toList());
     int n = arr.length;
 
@@ -29,6 +27,30 @@ public class MinimumSwapsTwo {
     }
 
     return swapsCount;
+  }
+
+  public int minimSwapArray(int [] arr) {
+    int countSwaps = 0;
+int i = 0;
+
+    while (i < arr.length) {
+      int correctIdx = arr[i] - 1;
+
+      if (i != correctIdx) {
+        int tmp = arr[i];
+        arr[i] = arr[correctIdx];
+        arr[correctIdx] = tmp;
+
+        countSwaps++;
+      }else {
+        i++;
+      }
+    }
+
+
+
+    return countSwaps;
+
   }
 
 }

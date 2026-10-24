@@ -28,11 +28,4 @@ public class CanConstruct {
     return canConstruct(target, wordBank, new LinkedHashMap<>());
   }
 
-  public static void main(String[] args) {
-    System.out.println(canConstruct("abcdef", new String[]{"ab", "abc", "cd", "def", "abcd"}));
-    System.out.println(canConstruct("", new String[]{"ab", "abc", "cd", "def", "abcd"}));
-    System.out.println(canConstruct("skateboard", new String[]{"ab", "abc", "cd", "def", "abcd", "ska", "board"}));
-    System.out.println(canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeef", new String[]{"ee", "e", "eee", "eeee", "eeeee", "eeeeeee"}));
-  }
-
 }

@@ -1,12 +1,14 @@
 package com.kkpa.hackerrank.java.arrays;
 
-import com.kkpa.hackerrank.java.AbstractDataStructuresJUnitTest;
+import com.kkpa.hackerrank.datastructures.arrays.Java1dArray;
 import org.assertj.core.util.Arrays;
-import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Let's play a game on an array! You're standing at index  of an -element array named . From some index  (where ), you can perform one of the following moves:
@@ -38,8 +40,9 @@ import java.util.List;
  * The second line contains  space-separated binary integers (i.e., zeroes and ones) describing the respective values of .
  */
 @RunWith(Parameterized.class)
-public class Java1dArrayTest extends AbstractDataStructuresJUnitTest {
+public class Java1dArrayTest {
 
+  private final Java1dArray java1dArray = new Java1dArray();
 
   @Parameterized.Parameter(0)
   public int lengthGame;
@@ -61,12 +64,15 @@ public class Java1dArrayTest extends AbstractDataStructuresJUnitTest {
                     {6, 5, new int[]{0, 0, 0, 1, 1, 1}, true},
                     {6, 3, new int[]{0, 0, 1, 1, 1, 0}, false},
                     {3, 1, new int[]{0, 1, 0}, false},
+                    // only wins by leaping to 5, walking back to 4, then leaping to 9
+                    {11, 5, new int[]{0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1}, true},
             }
     );
   }
 
-  @Before
-  public void setup() throws Exception {
+  @Test
+  public void testCanWin() {
+    assertEquals(expectedResult, java1dArray.canWin(leap, game));
   }
 
 }

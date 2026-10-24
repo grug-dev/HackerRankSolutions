@@ -20,7 +20,6 @@ public class DetectACycleC {
 
     private static Map<Integer, Integer> nodeMap = new LinkedHashMap<Integer, Integer>();
 
-    private static int cont = 0;
 
     static boolean hasCycle(Node head) {
 	if (head == null) {
@@ -29,7 +28,6 @@ public class DetectACycleC {
 	Node slow = head;
 	Node fast = head.next;
 	while (slow != fast) {
-	    System.out.println(cont++);
 	    if (fast == null || fast.next == null) {
 		return false;
 	    }
@@ -37,22 +35,6 @@ public class DetectACycleC {
 	    fast = fast.next.next;
 	}
 	return true;
-    }
-
-    public static void main(String[] args) {
-	Node head = new Node(1);
-
-	Node node2 = new Node(2);
-	Node node3 = new Node(3);
-	Node node4 = new Node(4);
-	Node node5 = new Node(5);
-
-	head.assignNext(node2);
-	node2.assignNext(node3);
-	node3.assignNext(node4);
-	node4.assignNext(node5);
-
-	System.out.println(hasCycle(head));
     }
 
 }

@@ -1,24 +1,8 @@
 package com.kkpa.hackerrank.interviewpreparationkit.sorting;
 
-import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
 
 public class SortingComparator {
-
-  public static void main(String[] args) {
-    List<Player> allPlayers = new ArrayList<>();
-    allPlayers.add(new Player("amy", 100));
-    allPlayers.add(new Player("david", 100));
-    allPlayers.add(new Player("heraldo", 50));
-    allPlayers.add(new Player("aakansha", 75));
-    allPlayers.add(new Player("aleksa", 150));
-
-    Checker checker = new Checker();
-    allPlayers.sort(checker);
-
-    allPlayers.forEach(player -> System.out.println(player.name + " " + player.score));
-  }
 
   static class Player {
     String name;

@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.interviewpreparationkit;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
+import com.kkpa.hackerrank.dynamicprogramming.MaxArraySum;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +12,9 @@ import java.util.Collection;
 import java.util.List;
 
 @RunWith(Parameterized.class)
-public class MaxArraySumTest extends AbstractInterviewPreparationKitConfigTest {
+public class MaxArraySumTest {
+
+  private final MaxArraySum maxArraySum = new MaxArraySum();
 
   @Parameterized.Parameter
   public List<Integer> indexes;

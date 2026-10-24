@@ -7,7 +7,7 @@ import java.util.List;
 
 public class AllConstruct {
 
-  private static List<List<String>> allConstruct(String target, String[] wordBank) {
+  static List<List<String>> allConstruct(String target, String[] wordBank) {
     return allConstruct(target, wordBank, new LinkedHashMap<>());
   }
 
@@ -28,11 +28,6 @@ public class AllConstruct {
       }
     }
     return result;
-  }
-
-  public static void main(String[] args) {
-    System.out.println(allConstruct("purple", new String[]{"purp", "p", "ur", "le", "purpl"}));
-    System.out.println(allConstruct("abcdef", new String[]{"ab", "abc", "cd", "def", "abcd", "ef", "c"}));
   }
 
 }

@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit.arrays;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
 import org.assertj.core.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +14,9 @@ import java.util.stream.Collectors;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class NewYearChaosTest extends AbstractInterviewPreparationKitConfigTest {
+public class NewYearChaosTest {
+
+  private final NewYearChaos newYearChaos = new NewYearChaos();
 
   @Parameter(0)
   public int numPeopleOnQueue;
@@ -41,8 +42,10 @@ public class NewYearChaosTest extends AbstractInterviewPreparationKitConfigTest 
   @Test
   public void testMinimumBribes() {
     String result = newYearChaos.minimumBribes(java.util.Arrays.stream(finalStateOnQueue).boxed().collect(Collectors.toList()));
+    String result2 = newYearChaos.minimumBribesArray(finalStateOnQueue);
 
     assertEquals(expected, result);
+    assertEquals(expected, result2);
 
   }
 

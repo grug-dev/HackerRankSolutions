@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.java.arrays;
 
-import com.kkpa.hackerrank.java.AbstractDataStructuresJUnitTest;
+import com.kkpa.hackerrank.datastructures.arrays.JavaHashSet;
 import org.assertj.core.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +13,9 @@ import java.util.List;
  * https://www.hackerrank.com/challenges/java-hashset/problem?isFullScreen=true
  */
 @RunWith(Parameterized.class)
-public class JavaHashSetTest extends AbstractDataStructuresJUnitTest {
+public class JavaHashSetTest {
+
+  private final JavaHashSet javaHashSet = new JavaHashSet();
 
 
   @Parameterized.Parameter(0)

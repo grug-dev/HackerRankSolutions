@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.interviewpreparationkit;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
+import com.kkpa.hackerrank.interviewpreparationkit.dictionariesandhashmaps.CountTriplets;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -12,7 +12,9 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class CountTripletsTest extends AbstractInterviewPreparationKitConfigTest {
+public class CountTripletsTest {
+
+  private final CountTriplets countTriplets = new CountTriplets();
 
   @Parameterized.Parameter
   public List<Long> data;
@@ -28,7 +30,10 @@ public class CountTripletsTest extends AbstractInterviewPreparationKitConfigTest
   public static Collection<Object[]> data() {
     return Arrays.asList(
             new Object[][]{
+                    {Arrays.asList(1L, 2L, 2L, 4L), 2, 2},
                     {Arrays.asList(1L, 3L, 9L, 9L, 27L, 81L), 3, 6},
+                    {Arrays.asList(1L, 5L, 5L, 25L, 125L), 5, 4},
+                    {Arrays.asList(1L, 1L, 1L, 1L), 1, 4},
             }
     );
   }

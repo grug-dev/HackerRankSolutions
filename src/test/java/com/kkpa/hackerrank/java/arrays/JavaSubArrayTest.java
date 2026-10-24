@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.java.arrays;
 
-import com.kkpa.hackerrank.java.AbstractDataStructuresJUnitTest;
+import com.kkpa.hackerrank.datastructures.arrays.JavaSubArray;
 import org.assertj.core.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
@@ -45,7 +45,9 @@ import static org.junit.Assert.assertEquals;
  * 9
  */
 @RunWith(Parameterized.class)
-public class JavaSubArrayTest extends AbstractDataStructuresJUnitTest {
+public class JavaSubArrayTest {
+
+  private final JavaSubArray javaSubbArray = new JavaSubArray();
 
 
   @Parameter(0)

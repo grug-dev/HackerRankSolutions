@@ -1,24 +1,9 @@
 package com.kkpa.hackerrank.algorithms.sorting;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class QuickSort {
-
-
-  public static void main(String[] args) {
-    int[] initialNumbers2 = new int[]{5, 7, 8, 3, 4, 1,};
-    List<Integer> initialNumbers = Arrays.stream(initialNumbers2).boxed().collect(Collectors.toList());
-
-    //start
-    List<Integer> result = quickSortWithCollections(initialNumbers);
-    System.out.println("Result " + result);
-
-    quickSort(initialNumbers2, 0, initialNumbers2.length - 1);
-    System.out.println("ARrays  " + Arrays.stream(initialNumbers2).boxed().collect(Collectors.toList()));
-  }
 
   public static List<Integer> quickSortWithCollections(List<Integer> initialNumbers) {
     if (initialNumbers.size() <= 1) {
@@ -45,7 +30,6 @@ public class QuickSort {
     return leftResult;
   }
 
-
   public static void quickSort(int[] array, int low, int high) {
     if (low >= high) {
       return;
@@ -56,9 +40,11 @@ public class QuickSort {
   }
 
   /**
-   * For simplicity, this function takes the last element as the pivot. Then, checks each element and swaps it before the pivot if its value is smaller.
+   * For simplicity, this function takes the last element as the pivot.
+   * Then, checks each element and swaps it before the pivot if its value is smaller.
    * <p>
-   * By the end of the partitioning, all elements less then the pivot are on the left of it and all elements greater then the pivot are on the right of it. The pivot is at its final sorted position and the function returns this position:
+   * By the end of the partitioning, all elements less then the pivot are on the left of it and all elements greater then the pivot are on the right of it.
+   * The pivot is at its final sorted position and the function returns this position:
    *
    * @param array
    * @param begin

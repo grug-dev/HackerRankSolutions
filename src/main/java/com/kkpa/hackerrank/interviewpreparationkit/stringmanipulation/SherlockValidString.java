@@ -1,11 +1,9 @@
 package com.kkpa.hackerrank.interviewpreparationkit.stringmanipulation;
 
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
 
 /**
  * https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem?h_l=interview&isFullScreen=true&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=strings
@@ -45,25 +43,6 @@ public class SherlockValidString {
     }
 
     return result;
-  }
-
-  public static void main(String[] args) {
-    String test = "abcc";
-    System.out.println(test + " YES -->" + isValid(test));
-
-    test = "abccc";
-    System.out.println(test + " NO -->" + isValid(test));
-
-    test = "aabbcd";
-    System.out.println("aabbcd  NO -->" + isValid(test));
-
-    test = "aabbccddeefghi";
-    System.out.println(test + " NO --> " + isValid(test));
-
-
-    test = "abcdefghhgfedecba";
-    System.out.println(test + " YES -->" + isValid(test));
-
   }
 
 }

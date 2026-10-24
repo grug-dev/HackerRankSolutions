@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank;
 
-
 import java.util.ArrayList;
 
 /**
@@ -12,9 +11,6 @@ import java.util.ArrayList;
  * An important concept in Object-Oriented Programming is the open/closed principle, which means writing code that is open to extension but closed to modification. In other words, new functionality should be added by writing an extension for the existing code rather than modifying it and potentially breaking other code that uses it. This challenge simulates a real-life problem where the open/closed principle can and should be applied.
  */
 public class VisitorPattern {
-
-  public static void main(String[] args) {
-  }
 
   enum Color {
     RED, GREEN;

@@ -3,14 +3,13 @@ package com.kkpa.hackerrank.java.strings;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
 public class TagContentExtractorTests {
 
   private TagContentExtractor contentExtractor;
@@ -25,9 +24,9 @@ public class TagContentExtractorTests {
   public void givenHTMLContentThenShouldExtractContent() {
     String word = "<SA premium>Imtiaz has a secret crush</SA premium>";
 
-    String contentExtract = contentExtractor.extract(word);
+    List<String> contentExtract = contentExtractor.extract(word);
 
-    assertEquals("Imtiaz has a secret crush", contentExtract);
+    assertEquals(Collections.singletonList("Imtiaz has a secret crush"), contentExtract);
 
   }
 
@@ -35,9 +34,9 @@ public class TagContentExtractorTests {
   public void givenBadHTMLContentThenShouldExtractContent() {
     String word = "<Amee>safat codes like a ninja</amee>";
 
-    String contentExtract = contentExtractor.extract(word);
+    List<String> contentExtract = contentExtractor.extract(word);
 
-    assertEquals(TagContentExtractor.NONE, contentExtract);
+    assertEquals(Collections.emptyList(), contentExtract);
 
   }
 
@@ -45,9 +44,9 @@ public class TagContentExtractorTests {
   public void givenInnerHTMLContentThenShouldExtractContent() {
     String word = "<h1><h1>Sanjay has no watch</h1></h1><par>So wait for a while</par>";
 
-    String contentExtract = contentExtractor.extract(word);
+    List<String> contentExtract = contentExtractor.extract(word);
 
-    assertEquals("So wait for a while", contentExtract);
+    assertEquals(Arrays.asList("Sanjay has no watch", "So wait for a while"), contentExtract);
 
   }
 
@@ -55,9 +54,9 @@ public class TagContentExtractorTests {
   public void givenInnerXHTMLContentThenShouldExtractContent() {
     String word = "<h1><h1>Sanjay has no watch</h1></h2><par>So wait for a while</par>";
 
-    String contentExtract = contentExtractor.extract(word);
+    List<String> contentExtract = contentExtractor.extract(word);
 
-    assertEquals("Sanjay has no watch", contentExtract);
+    assertEquals(Arrays.asList("Sanjay has no watch", "So wait for a while"), contentExtract);
 
   }
 

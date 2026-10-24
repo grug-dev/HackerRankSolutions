@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit.arrays;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -14,7 +13,9 @@ import static org.junit.Assert.assertArrayEquals;
 
 
 @RunWith(Parameterized.class)
-public class LeftRotationTest extends AbstractInterviewPreparationKitConfigTest {
+public class LeftRotationTest {
+
+  private final LeftRotation leftRotation = new LeftRotation();
 
 
   @Parameter
@@ -31,6 +32,7 @@ public class LeftRotationTest extends AbstractInterviewPreparationKitConfigTest 
   public static Collection<Object[]> data() {
     return Arrays.asList(
             new Object[][]{
+                    {new int[]{1, 2, 3, 4, 5}, 2, new int[]{ 3, 4, 5 , 1 , 2}},
                     {new int[]{1, 2, 3, 4, 5}, 4, new int[]{5, 1, 2, 3, 4}},
                     {new int[]{1, 2, 3, 4, 5}, 11, new int[]{2, 3, 4, 5, 1}},
                     {new int[]{1, 2, 3, 4, 5}, 5, new int[]{1, 2, 3, 4, 5}}
