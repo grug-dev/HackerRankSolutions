@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.interviewpreparationkit;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
+import com.kkpa.hackerrank.interviewpreparationkit.search.SwapNodes;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +12,9 @@ import java.util.Collection;
 import java.util.List;
 
 @RunWith(Parameterized.class)
-public class SwapNodesTest extends AbstractInterviewPreparationKitConfigTest {
+public class SwapNodesTest {
+
+  private final SwapNodes swapNodes = new SwapNodes();
 
   @Parameterized.Parameter
   public List<List<Integer>> indexes;

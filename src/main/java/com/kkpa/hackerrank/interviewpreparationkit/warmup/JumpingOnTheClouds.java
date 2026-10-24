@@ -1,10 +1,8 @@
 package com.kkpa.hackerrank.interviewpreparationkit.warmup;
 
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
 public class JumpingOnTheClouds {
 
   public int jumpingOnClouds(List<Integer> c) {

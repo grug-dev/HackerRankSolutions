@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.algorithms.dynamicprogramming;
 
-import com.kkpa.hackerrank.algorithms.AlgorithmsSortingConfigJunitTest;
 import org.assertj.core.util.Arrays;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +10,9 @@ import java.util.List;
 import static junit.framework.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class SamAndSubstringsTest extends AlgorithmsSortingConfigJunitTest {
+public class SamAndSubstringsTest {
+
+  private final SamAndSubstrings samAndSubstrings = new SamAndSubstrings();
 
 
   @Parameterized.Parameter(0)

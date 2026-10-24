@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.interviewpreparationkit;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
+import com.kkpa.hackerrank.interviewpreparationkit.stringmanipulation.SpecialStringAgain;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -11,7 +11,9 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class SpecialStringAgainTest extends AbstractInterviewPreparationKitConfigTest {
+public class SpecialStringAgainTest {
+
+  private final SpecialStringAgain specialStringAgain = new SpecialStringAgain();
 
   @Parameterized.Parameter
   public String data;

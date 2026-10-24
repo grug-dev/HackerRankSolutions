@@ -1,13 +1,11 @@
 package com.kkpa.hackerrank.datasctructures.arrayList;
 
-import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
 /**
  * https://www.hackerrank.com/challenges/phone-book/problem?isFullScreen=true
  */
-@Component
 public class JavaMap {
 
   /**

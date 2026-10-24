@@ -1,8 +1,8 @@
 package com.kkpa.hackerrank.interviewpreparationkit;
 
+import com.kkpa.hackerrank.interviewpreparationkit.dictionarieshasmaps.SherlockAnagrams;
 import static org.junit.Assert.assertEquals;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Test;
@@ -10,7 +10,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
-public class SherlockAnagramsTest extends AbstractInterviewPreparationKitConfigTest {
+public class SherlockAnagramsTest {
+
+  private final SherlockAnagrams sherlockAnagrams = new SherlockAnagrams();
 
   @Parameterized.Parameter public String data;
 

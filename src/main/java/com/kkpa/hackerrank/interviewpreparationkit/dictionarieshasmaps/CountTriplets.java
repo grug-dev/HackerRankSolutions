@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit.dictionarieshasmaps;
 
-import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -9,7 +8,6 @@ import java.util.Queue;
 /**
  * https://www.hackerrank.com/challenges/count-triplets-1/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps
  */
-@Component
 public class CountTriplets {
 
   public long countTriplets(List<Long> arr, long commonRatio) {

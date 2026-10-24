@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.interviewpreparationkit;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
+import com.kkpa.hackerrank.interviewpreparationkit.dictionarieshasmaps.CountTriplets;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -12,7 +12,9 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class CountTripletsTest extends AbstractInterviewPreparationKitConfigTest {
+public class CountTripletsTest {
+
+  private final CountTriplets countTriplets = new CountTriplets();
 
   @Parameterized.Parameter
   public List<Long> data;

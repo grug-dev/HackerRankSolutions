@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit.stringmanipulation;
 
-import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.function.Function;
@@ -9,7 +8,6 @@ import java.util.stream.Collectors;
 /**
  * https://www.hackerrank.com/challenges/special-palindrome-again/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings
  */
-@Component
 public class SpecialStringAgain {
   public int substrCount(int length, String data) {
     int specialStringCount = length;

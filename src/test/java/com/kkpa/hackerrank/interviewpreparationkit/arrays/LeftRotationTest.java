@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit.arrays;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -14,7 +13,9 @@ import static org.junit.Assert.assertArrayEquals;
 
 
 @RunWith(Parameterized.class)
-public class LeftRotationTest extends AbstractInterviewPreparationKitConfigTest {
+public class LeftRotationTest {
+
+  private final LeftRotation leftRotation = new LeftRotation();
 
 
   @Parameter

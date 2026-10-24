@@ -1,11 +1,9 @@
 package com.kkpa.hackerrank.interviewpreparationkit.arrays;
 
-import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 import java.util.List;
 
-@Component
 public class NewYearChaos {
 
   // Complete the minimumBribes function below.

@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.java.arrays;
 
-import com.kkpa.hackerrank.java.AbstractDataStructuresJUnitTest;
 import org.assertj.core.util.Arrays;
 import org.junit.Before;
 import org.junit.runner.RunWith;
@@ -38,7 +37,7 @@ import java.util.List;
  * The second line contains  space-separated binary integers (i.e., zeroes and ones) describing the respective values of .
  */
 @RunWith(Parameterized.class)
-public class Java1dArrayTest extends AbstractDataStructuresJUnitTest {
+public class Java1dArrayTest {
 
 
   @Parameterized.Parameter(0)

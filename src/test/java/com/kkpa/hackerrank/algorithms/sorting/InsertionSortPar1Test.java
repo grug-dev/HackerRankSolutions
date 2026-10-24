@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.algorithms.sorting;
 
-import com.kkpa.hackerrank.algorithms.AlgorithmsSortingConfigJunitTest;
 import org.assertj.core.util.Arrays;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,7 +13,9 @@ import static org.junit.Assert.assertEquals;
  * https://www.hackerrank.com/challenges/insertionsort1/problem
  */
 @RunWith(Parameterized.class)
-public class InsertionSortPar1Test extends AlgorithmsSortingConfigJunitTest {
+public class InsertionSortPar1Test {
+
+  private final Insertion_Sort_Part1 insertionSortPart1 = new Insertion_Sort_Part1();
 
   @Parameterized.Parameter(0)
   public int n;

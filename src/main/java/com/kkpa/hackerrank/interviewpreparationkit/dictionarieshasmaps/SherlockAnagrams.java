@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
-import org.springframework.stereotype.Component;
 
 /**
  * https://www.hackerrank.com/challenges/sherlock-and-anagrams/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps
@@ -15,7 +14,6 @@ import org.springframework.stereotype.Component;
  * <p>Given a string, find the number of pairs of substrings of the string that are anagrams of each
  * other.
  */
-@Component
 public class SherlockAnagrams {
 
   /*

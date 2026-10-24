@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit.arrays;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
 import org.assertj.core.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +16,9 @@ import static org.junit.Assert.assertEquals;
  * https://www.hackerrank.com/challenges/minimum-swaps-2/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
  */
 @RunWith(Parameterized.class)
-public class MinimumSwapsTwoTest extends AbstractInterviewPreparationKitConfigTest {
+public class MinimumSwapsTwoTest {
+
+  private final MinimumSwapsTwo minimumSwapsTwo = new MinimumSwapsTwo();
 
   @Parameter(0)
   public int n;

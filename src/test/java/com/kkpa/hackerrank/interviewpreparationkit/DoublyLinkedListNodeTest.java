@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit;
 
-import com.kkpa.hackerrank.AbstractInterviewPreparationKitConfigTest;
 import com.kkpa.hackerrank.interviewpreparationkit.linkedlist.DoublyLinkedListNodeSolution;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,7 +12,9 @@ import java.util.Collection;
 import java.util.List;
 
 @RunWith(Parameterized.class)
-public class DoublyLinkedListNodeTest extends AbstractInterviewPreparationKitConfigTest {
+public class DoublyLinkedListNodeTest {
+
+  private final DoublyLinkedListNodeSolution doublyLinkedListNode = new DoublyLinkedListNodeSolution();
 
   @Parameterized.Parameter
   public DoublyLinkedListNodeSolution.DoublyLinkedListNode headNode;

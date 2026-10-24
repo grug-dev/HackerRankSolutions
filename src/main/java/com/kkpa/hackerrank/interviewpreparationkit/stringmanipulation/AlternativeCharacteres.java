@@ -1,11 +1,9 @@
 package com.kkpa.hackerrank.interviewpreparationkit.stringmanipulation;
 
-import org.springframework.stereotype.Component;
 
 /**
  * https://www.hackerrank.com/challenges/alternating-characters/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings
  */
-@Component
 public class AlternativeCharacteres {
 
   /*
