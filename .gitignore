@@ -28,3 +28,6 @@
 ## Eclipse ##
 *.class
 /bin/
+
+### macOS ###
+.DS_Store
