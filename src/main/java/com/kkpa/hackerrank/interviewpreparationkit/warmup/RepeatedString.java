@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit.warmup;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,12 +36,4 @@ class Result {
 
 public class RepeatedString {
 
-  public static void main(String[] args) throws IOException {
-    String s = "aba";
-    long n = 10;
-
-    long result = Result.repeatedString(s, n);
-
-    System.out.println(result);
-  }
 }

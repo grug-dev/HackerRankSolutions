@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class CountConstruct {
 
-
   public static int countConstruct(String target, String[] wordBank, Map<String, Integer> memo) {
     if (memo.containsKey(target)) return memo.get(target);
     if (target == null || target.isEmpty()) return 1;
@@ -26,8 +25,4 @@ public class CountConstruct {
     return countConstruct(target, wordBank, new LinkedHashMap<>());
   }
 
-  public static void main(String[] args) {
-    System.out.println(countConstruct("purple", new String[]{"purp", "p", "ur", "le", "purpl"}));
-    System.out.println(countConstruct("abcdef", new String[]{"ab", "abc", "cd", "def", "abcd"}));
-  }
 }

@@ -4,14 +4,6 @@ import java.util.HashMap;
 
 public class GridTraveler {
 
-  public static void main(String[] args) {
-    System.out.println(" 1 - " + gridTraveler(1, 1));
-    System.out.println(" 3 - " + gridTraveler(2, 3));
-    System.out.println(" 3 - " + gridTraveler(3, 2));
-    System.out.println(" 6 - " + gridTraveler(3, 3));
-    System.out.println(" 2333606220 - " + gridTraveler(18, 18));
-  }
-
   private static long gridTraveler(int m, int n) {
     return gridTraveler(m, n, new HashMap<>());
   }

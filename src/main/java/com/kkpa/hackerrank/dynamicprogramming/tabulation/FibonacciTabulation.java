@@ -17,8 +17,4 @@ public class FibonacciTabulation {
     return fibArray[n];
   }
 
-  public static void main(String[] args) {
-    System.out.println(fib(50));
-  }
-
 }

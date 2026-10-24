@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit.greedyAlgorithms;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -40,18 +39,6 @@ public class MaxMin {
       }
     }
     return maxmin;
-  }
-
-  public static void main(String[] args) {
-    int k = 3;
-    List<Integer> arr = Arrays.asList(1,
-            2,
-            1,
-            2,
-            1
-
-    );
-    System.out.println(maxMin(k, arr));
   }
 
 }

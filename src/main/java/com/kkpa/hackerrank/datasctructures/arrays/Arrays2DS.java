@@ -2,13 +2,10 @@ package com.kkpa.hackerrank.datasctructures.arrays;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class Arrays2DS {
-
-    private static Scanner scan = new Scanner(System.in);
 
     // Complete the hourglassSum function below.
     static int hourglassSum(int[][] arr) {
@@ -44,23 +41,6 @@ public class Arrays2DS {
 	});
 
 	return sumHourGlasses.stream().max(Integer::compareTo).get();
-    }
-
-    public static void main(String[] args) {
-	int n = 6;
-	int[][] arr = new int[n][n];
-
-	for (int row = 0; row < n; row++) {
-	    String[] line = scan.nextLine().split(" ");
-	    for (int col = 0; col < n; col++) {
-		String value = line[col];
-		if (!value.isEmpty())
-		    arr[row][col] = Integer.parseInt(line[col]);
-	    }
-	}
-
-	System.out.println(hourglassSum(arr));
-
     }
 
 }

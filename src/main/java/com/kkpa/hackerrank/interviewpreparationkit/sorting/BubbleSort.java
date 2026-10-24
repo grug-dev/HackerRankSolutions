@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit.sorting;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -24,7 +23,4 @@ public class BubbleSort {
     System.out.println("Last Element: " + lst.get(n - 1));
   }
 
-  public static void main(String[] args) {
-    countSwaps(Arrays.asList(1, 2, 3));
-  }
 }

@@ -37,15 +37,8 @@ public class HowSum {
     return result;
   }
 
-
   private static List<Long> howSum(long targetSum, int[] numbers) {
     return howSum(targetSum, numbers, new HashMap<>());
-  }
-
-  public static void main(String[] args) {
-    System.out.println(" true " + howSum(7, new int[]{2, 3}));
-    System.out.println(" true " + howSum(7, new int[]{8, 2, 4, 1, 7}));
-    System.out.println(" false " + howSum(7, new int[]{2, 4}));
   }
 
 }

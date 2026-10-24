@@ -3,7 +3,6 @@ package com.kkpa.hackerrank.crackingcodinginterview;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class FibonacciNumbers {
 
@@ -33,17 +32,4 @@ public class FibonacciNumbers {
     return result;
   }
 
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    int n = scanner.nextInt();
-    scanner.close();
-    long init = System.nanoTime();
-    System.out.println(fibonacci(n));
-    long end = System.nanoTime();
-    System.out.println("time: " + (end - init));
-    init = System.nanoTime();
-    System.out.println(fibonacciLinked(n));
-    end = System.nanoTime();
-    System.out.println("time Link: " + (end - init));
-  }
 }

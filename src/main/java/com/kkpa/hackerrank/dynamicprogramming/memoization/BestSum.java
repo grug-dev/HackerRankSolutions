@@ -26,7 +26,6 @@ public class BestSum {
     if (targetSum == 0) return new ArrayList<>();
     if (targetSum < 0) return null;
 
-
     for (int n : numbers) {
       long remainder = targetSum - n;
       List<Long> result = bestSum(remainder, numbers, memo);
@@ -45,16 +44,9 @@ public class BestSum {
     return shortest;
   }
 
-
   private static List<Long> bestSum(long targetSum, int[] numbers) {
     HashMap<Long, List<Long>> memo = new HashMap<>();
     return bestSum(targetSum, numbers, memo);
-  }
-
-  public static void main(String[] args) {
-    System.out.println(" true " + bestSum(7, new int[]{2, 3}));
-    System.out.println(" true " + bestSum(7, new int[]{8, 2, 4, 1, 7}));
-    System.out.println(" false " + bestSum(100, new int[]{1, 4, 5, 25}));
   }
 
 }

@@ -1,7 +1,5 @@
 package com.kkpa.hackerrank.interviewpreparationkit.greedyAlgorithms;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -35,20 +33,7 @@ public class LuckBalance {
       luckBalance = maxAmountToLose + maxAmountToWin + maxRegularContest;
     }
 
-
     return luckBalance;
   }
 
-  public static void main(String[] args) {
-    List<List<Integer>> all = new ArrayList<>();
-    all.add(Arrays.asList(2, 1));
-    all.add(Arrays.asList(1, 1));
-    all.add(Arrays.asList(5, 1));
-    all.add(Arrays.asList(8, 1));
-    all.add(Arrays.asList(10, 0));
-    all.add(Arrays.asList(5, 0));
-
-    int k = 3;
-    System.out.printf("Luck Balance: " + luckBalance(k, all));
-  }
 }
