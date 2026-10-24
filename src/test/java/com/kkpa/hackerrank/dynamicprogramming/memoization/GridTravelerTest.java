@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.dynamicprogramming.memoization;
 
-import com.kkpa.TestSupport;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -12,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class GridTravelerTest {
 
   private static long gridTraveler(int m, int n) {
-    return TestSupport.invokeStatic(GridTraveler.class, "gridTraveler", new Class<?>[]{int.class, int.class}, m, n);
+    return GridTraveler.gridTraveler(m, n);
   }
 
   @Test

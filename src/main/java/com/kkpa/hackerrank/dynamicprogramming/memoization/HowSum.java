@@ -37,7 +37,7 @@ public class HowSum {
     return result;
   }
 
-  private static List<Long> howSum(long targetSum, int[] numbers) {
+  static List<Long> howSum(long targetSum, int[] numbers) {
     return howSum(targetSum, numbers, new HashMap<>());
   }
 

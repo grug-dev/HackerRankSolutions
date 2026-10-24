@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.dynamicprogramming.memoization;
 
-import com.kkpa.TestSupport;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -18,7 +17,7 @@ import static org.junit.Assert.assertTrue;
 public class BestSumTest {
 
   private static List<Long> bestSum(long targetSum, int... numbers) {
-    return TestSupport.invokeStatic(BestSum.class, "bestSum", new Class<?>[]{long.class, int[].class}, targetSum, numbers);
+    return BestSum.bestSum(targetSum, numbers);
   }
 
   private static void assertShortestCombination(long targetSum, int expectedSize, List<Long> combination) {

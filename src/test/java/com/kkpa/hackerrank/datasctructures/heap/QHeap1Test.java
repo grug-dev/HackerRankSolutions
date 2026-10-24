@@ -20,16 +20,16 @@ public class QHeap1Test {
   }
 
   private static void add(int value) {
-    TestSupport.invokeStatic(QHeap1.class, "addToHead", new Class<?>[]{int.class}, value);
+    QHeap1.addToHead(value);
   }
 
   private static void delete(int value) {
-    TestSupport.invokeStatic(QHeap1.class, "removeFromHeap", new Class<?>[]{int.class}, value);
+    QHeap1.removeFromHeap(value);
   }
 
   private static String printMinimum() {
     return TestSupport.captureOutput(
-            () -> TestSupport.invokeStatic(QHeap1.class, "printMinimumValueFromHeap", new Class<?>[]{}));
+            () -> QHeap1.printMinimumValueFromHeap());
   }
 
   @Test

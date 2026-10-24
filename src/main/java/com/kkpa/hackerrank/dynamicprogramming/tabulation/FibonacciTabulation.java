@@ -2,7 +2,7 @@ package com.kkpa.hackerrank.dynamicprogramming.tabulation;
 
 public class FibonacciTabulation {
 
-  private static long fib(int n) {
+  static long fib(int n) {
     int result = 0;
 
     long[] fibArray = new long[n + 2];

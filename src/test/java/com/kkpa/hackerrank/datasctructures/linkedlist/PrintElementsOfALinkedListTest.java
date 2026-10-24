@@ -18,8 +18,7 @@ public class PrintElementsOfALinkedListTest {
     for (int value : values) {
       list.insertNode(value);
     }
-    return TestSupport.captureOutput(() -> TestSupport.invokeStatic(PrintElementsOfALinkedList.class, "printLinkedList",
-            new Class<?>[]{SinglyLinkedListNode.class}, list.head));
+    return TestSupport.captureOutput(() -> PrintElementsOfALinkedList.printLinkedList(list.head));
   }
 
   @Test

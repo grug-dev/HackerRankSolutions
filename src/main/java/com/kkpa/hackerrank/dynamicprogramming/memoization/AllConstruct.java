@@ -7,7 +7,7 @@ import java.util.List;
 
 public class AllConstruct {
 
-  private static List<List<String>> allConstruct(String target, String[] wordBank) {
+  static List<List<String>> allConstruct(String target, String[] wordBank) {
     return allConstruct(target, wordBank, new LinkedHashMap<>());
   }
 

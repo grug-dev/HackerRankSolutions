@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.dynamicprogramming.memoization;
 
-import com.kkpa.TestSupport;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -19,7 +18,7 @@ import static org.junit.Assert.assertEquals;
 public class AllConstructTest {
 
   private static List<List<String>> allConstruct(String target, String... wordBank) {
-    return TestSupport.invokeStatic(AllConstruct.class, "allConstruct", new Class<?>[]{String.class, String[].class}, target, wordBank);
+    return AllConstruct.allConstruct(target, wordBank);
   }
 
   private static void assertSameWays(List<List<String>> expected, List<List<String>> actual) {

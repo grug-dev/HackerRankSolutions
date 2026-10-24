@@ -44,7 +44,7 @@ public class BestSum {
     return shortest;
   }
 
-  private static List<Long> bestSum(long targetSum, int[] numbers) {
+  static List<Long> bestSum(long targetSum, int[] numbers) {
     HashMap<Long, List<Long>> memo = new HashMap<>();
     return bestSum(targetSum, numbers, memo);
   }

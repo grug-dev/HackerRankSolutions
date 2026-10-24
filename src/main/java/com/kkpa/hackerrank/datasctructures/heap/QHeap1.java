@@ -6,16 +6,16 @@ public class QHeap1 {
 
   static PriorityQueue<Integer> pQueue = new PriorityQueue<Integer>();
 
-  private static void printMinimumValueFromHeap() {
+  static void printMinimumValueFromHeap() {
     System.out.println(pQueue.peek());
 
   }
 
-  private static void addToHead(int value) {
+  static void addToHead(int value) {
     pQueue.add(value);
   }
 
-  private static void removeFromHeap(int value) {
+  static void removeFromHeap(int value) {
     pQueue.remove(value);
   }
 

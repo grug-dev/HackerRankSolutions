@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class GridTraveler {
 
-  private static long gridTraveler(int m, int n) {
+  static long gridTraveler(int m, int n) {
     return gridTraveler(m, n, new HashMap<>());
   }
 

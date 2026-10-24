@@ -34,7 +34,7 @@ public class CanSum {
     return result;
   }
 
-  private static boolean canSum(long targetSum, int[] numbers) {
+  static boolean canSum(long targetSum, int[] numbers) {
     return canSum(targetSum, numbers, new HashMap<>());
   }
 

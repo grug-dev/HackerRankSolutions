@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.dynamicprogramming.tabulation;
 
-import com.kkpa.TestSupport;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -11,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 public class FibonacciTabulationTest {
 
   private static long fib(int n) {
-    return TestSupport.invokeStatic(FibonacciTabulation.class, "fib", new Class<?>[]{int.class}, n);
+    return FibonacciTabulation.fib(n);
   }
 
   @Test

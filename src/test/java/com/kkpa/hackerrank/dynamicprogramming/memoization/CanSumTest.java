@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.dynamicprogramming.memoization;
 
-import com.kkpa.TestSupport;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -12,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 public class CanSumTest {
 
   private static boolean canSum(long targetSum, int... numbers) {
-    return TestSupport.invokeStatic(CanSum.class, "canSum", new Class<?>[]{long.class, int[].class}, targetSum, numbers);
+    return CanSum.canSum(targetSum, numbers);
   }
 
   @Test

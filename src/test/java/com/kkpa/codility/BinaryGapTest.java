@@ -1,6 +1,5 @@
 package com.kkpa.codility;
 
-import com.kkpa.TestSupport;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -11,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 public class BinaryGapTest {
 
   private static int longestGap(int n) {
-    return TestSupport.invokeStatic(BinaryGap.class, "findLengthLongestBinaryGap", new Class<?>[]{int.class}, n);
+    return BinaryGap.findLengthLongestBinaryGap(n);
   }
 
   @Test

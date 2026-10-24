@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.dynamicprogramming.memoization;
 
-import com.kkpa.TestSupport;
 import org.junit.Test;
 
 import java.util.List;
@@ -17,7 +16,7 @@ import static org.junit.Assert.assertTrue;
 public class HowSumTest {
 
   private static List<Long> howSum(long targetSum, int... numbers) {
-    return TestSupport.invokeStatic(HowSum.class, "howSum", new Class<?>[]{long.class, int[].class}, targetSum, numbers);
+    return HowSum.howSum(targetSum, numbers);
   }
 
   private static void assertValidCombination(long targetSum, int[] numbers, List<Long> combination) {

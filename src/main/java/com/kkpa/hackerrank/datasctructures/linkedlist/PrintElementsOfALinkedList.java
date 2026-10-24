@@ -34,7 +34,7 @@ public class PrintElementsOfALinkedList {
     }
   }
 
-  private static void printLinkedList(SinglyLinkedListNode head) {
+  static void printLinkedList(SinglyLinkedListNode head) {
     SinglyLinkedListNode value = head;
 
     while (value.next != null) {

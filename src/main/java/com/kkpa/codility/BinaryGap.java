@@ -2,7 +2,7 @@ package com.kkpa.codility;
 
 public class BinaryGap {
 
-  private static int findLengthLongestBinaryGap(int n) {
+  static int findLengthLongestBinaryGap(int n) {
     String binaryStr = Integer.toBinaryString(n);
     int max = 0;
     int currentGap = 0;
