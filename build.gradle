@@ -1,16 +1,25 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
+plugins {
+	id 'java'
+}
 
 group = 'com.kkpa'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 8
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
 
 repositories {
 	mavenCentral()
 }
 
-
 dependencies {
-	testCompile('junit:junit:4.13.2')
-	testCompile('org.assertj:assertj-core:3.27.7')
+	testImplementation 'junit:junit:4.13.2'
+	testImplementation 'org.assertj:assertj-core:3.27.7'
+}
+
+tasks.named('test') {
+	useJUnit()
 }
