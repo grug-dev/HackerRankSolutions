@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.interviewpreparationkit;
 
-import com.kkpa.hackerrank.interviewpreparationkit.dictionarieshasmaps.CountTriplets;
+import com.kkpa.hackerrank.interviewpreparationkit.dictionariesandhashmaps.CountTriplets;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;

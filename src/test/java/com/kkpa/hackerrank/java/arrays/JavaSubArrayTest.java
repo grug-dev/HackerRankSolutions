@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.java.arrays;
 
-import com.kkpa.hackerrank.datasctructures.arrays.JavaSubArray;
+import com.kkpa.hackerrank.datastructures.arrays.JavaSubArray;
 import org.assertj.core.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;

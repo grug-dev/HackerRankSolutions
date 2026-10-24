@@ -1,6 +1,6 @@
 package com.kkpa.hackerrank.interviewpreparationkit;
 
-import com.kkpa.hackerrank.interviewpreparationkit.dictionarieshasmaps.SherlockAnagrams;
+import com.kkpa.hackerrank.interviewpreparationkit.dictionariesandhashmaps.SherlockAnagrams;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
