@@ -38,4 +38,16 @@ public class MarkAndToysTest {
   public void budgetBuysEverything() {
     assertEquals(3, MarkAndToys.maximumToys(list(5, 10, 15), 30));
   }
+
+  @Test
+  public void noToys() {
+    assertEquals(0, MarkAndToys.maximumToys(list(), 10));
+  }
+
+  @Test
+  public void doesNotChangeThePrices() {
+    List<Integer> prices = list(3, 1, 2);
+    MarkAndToys.maximumToys(prices, 10);
+    assertEquals(list(3, 1, 2), prices);
+  }
 }
