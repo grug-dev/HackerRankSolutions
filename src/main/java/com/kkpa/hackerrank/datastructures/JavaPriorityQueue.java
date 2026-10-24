@@ -58,7 +58,7 @@ class Priorities {
       String[] args = event.split(" ");
       if (args[0].toUpperCase().equalsIgnoreCase("ENTER")) {
         String name = args[1];
-        double cgpt = new Double(args[2]).doubleValue();
+        double cgpt = Double.parseDouble(args[2]);
         int id = Integer.parseInt(args[3]);
         priorityQueue.offer(new Student(id, name, cgpt));
       } else {
