@@ -41,8 +41,10 @@ public class NewYearChaosTest extends AbstractInterviewPreparationKitConfigTest 
   @Test
   public void testMinimumBribes() {
     String result = newYearChaos.minimumBribes(java.util.Arrays.stream(finalStateOnQueue).boxed().collect(Collectors.toList()));
+    String result2 = newYearChaos.minimumBribesArray(finalStateOnQueue);
 
     assertEquals(expected, result);
+    assertEquals(expected, result2);
 
   }
 

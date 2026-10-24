@@ -3,7 +3,6 @@ package com.kkpa.hackerrank.datasctructures;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * https://www.hackerrank.com/challenges/java-bitset/problem?isFullScreen=true
@@ -15,23 +14,12 @@ import java.util.Scanner;
  */
 public class JavaBitSet {
 
-  public static void main(String args[]) {
-    Scanner scan = new Scanner(System.in);
-    int n = scan.nextInt();
-    int numOperations = scan.nextInt();
-
-    int cont = 1;
-    List<String> operations = new ArrayList<>();
-    while (cont <= numOperations) {
-      String s = scan.nextLine();
-      if (s != null && !s.isEmpty()) {
-        cont++;
-        operations.add(s);
-      }
-    }
-    if (operations.size() != numOperations) {
-      throw new IllegalArgumentException("No total operations");
-    }
+  /**
+   * Applies each operation to two BitSets of size n.
+   * Returns, for each operation, the set bit counts of B1 and B2 as "b1 b2".
+   */
+  public static List<String> applyOperations(int n, List<String> operations) {
+    List<String> results = new ArrayList<>();
     BitSet b1 = new BitSet(n);
     BitSet b2 = new BitSet(n);
     for (String operation : operations) {
@@ -39,8 +27,7 @@ public class JavaBitSet {
       String instruction = ops[0];
       int numSet = Integer.parseInt(ops[1]);
       int index = Integer.parseInt(ops[2]);
-      BitSet tmp = null;
-      tmp = numSet == 1 ? b1 : b2;
+      BitSet tmp = numSet == 1 ? b1 : b2;
       switch (instruction) {
         case "AND":
           if (numSet == 1) {
@@ -70,10 +57,8 @@ public class JavaBitSet {
           tmp.set(index);
           break;
       }
-      // printe set bits b1, b2
-      long setBitCountB1 = b1.stream().count();
-      long setBitCountB2 = b2.stream().count();
-      System.out.println(String.format("%d %d", b1.cardinality(), setBitCountB2));
+      results.add(String.format("%d %d", b1.cardinality(), b2.cardinality()));
     }
+    return results;
   }
 }

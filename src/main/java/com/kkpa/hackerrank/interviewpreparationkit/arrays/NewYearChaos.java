@@ -52,4 +52,29 @@ public class NewYearChaos {
     return "" + totalBribes;
   }
 
+  public static String minimumBribesArray(int[] q) {
+    int bribes = 0;
+
+    for (int i = 0; i < q.length; i++) {
+
+      int currentPosition = q[i];
+
+      // A person cannot move forward by more than 2 places.
+      if (currentPosition - (i + 1) > 2) {
+        return "Too chaotic";
+      }
+
+      // Check only positions where a briber could have started.
+      int start = Math.max(0, currentPosition - 2);
+
+      for (int j = start; j < i; j++) {
+        if (q[j] > q[i]) {
+          bribes++;
+        }
+      }
+    }
+
+   return "" + bribes;
+  }
+
 }

@@ -43,7 +43,12 @@ public class MinimumSwapsTwoTest extends AbstractInterviewPreparationKitConfigTe
 
   @Test
   public void testMinimumBribes() {
-    int result = minimumSwapsTwo.minimumSwaps(customARray);
+    int result = minimumSwapsTwo.minimumSwapsCollection(customARray);
+
+    assertEquals(expected, result);
+
+
+     result = minimumSwapsTwo.minimSwapArray(customARray);
 
     assertEquals(expected, result);
 

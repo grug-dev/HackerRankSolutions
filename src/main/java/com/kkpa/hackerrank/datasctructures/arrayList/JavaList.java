@@ -5,8 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
-import java.util.Scanner;
-import java.util.stream.Collectors;
+import java.util.List;
 
 /**
  * https://www.hackerrank.com/challenges/java-list/problem
@@ -16,31 +15,21 @@ public class JavaList {
 
   private static Logger log = LoggerFactory.getLogger(JavaList.class);
 
-  public static void main(String[] args) {
-    Scanner scan = new Scanner(System.in);
-    int size;
-
-    size = scan.nextInt();
-
-    LinkedList<Integer> numbers = new LinkedList<>();
-    for (int i = 0; i < size; i++) {
-      numbers.add(scan.nextInt());
-    }
-    int totalQueries = scan.nextInt();
-
-    for (int i = 0; i < totalQueries; i++) {
-      String query = scan.next();
-      if (query.equalsIgnoreCase("Insert")) {
-        int index = scan.nextInt();
-        int value = scan.nextInt();
-        numbers.add(index, value);
+  /**
+   * Applies each query to a copy of the numbers and returns the result.
+   * A query is "Insert index value" or "Delete index".
+   */
+  public static List<Integer> applyQueries(List<Integer> numbers, List<String> queries) {
+    LinkedList<Integer> result = new LinkedList<>(numbers);
+    for (String query : queries) {
+      String[] parts = query.split(" ");
+      int index = Integer.parseInt(parts[1]);
+      if (parts[0].equalsIgnoreCase("Insert")) {
+        result.add(index, Integer.parseInt(parts[2]));
       } else {
-        int index = scan.nextInt();
-        numbers.remove(index);
+        result.remove(index);
       }
     }
-
-    System.out.println(String.join(" ", numbers.stream().map(n -> n.toString()).collect(Collectors.toList())));
-
+    return result;
   }
 }

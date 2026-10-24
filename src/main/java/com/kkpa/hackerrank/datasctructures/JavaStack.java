@@ -1,6 +1,5 @@
 package com.kkpa.hackerrank.datasctructures;
 
-import java.util.Scanner;
 import java.util.Stack;
 
 /**
@@ -52,44 +51,29 @@ true
 
    */
 
-  public static void main(String[] argh) {
-    Scanner sc = new Scanner(System.in);
-
-    while (sc.hasNext()) {
-      String input = sc.next();
-      Stack<Character> stack = new Stack<>();
-      boolean result = true;
-
-      if (input != null && input.length() >= 0) {
-        char[] charArray = input.toCharArray();
-        for (Character c : charArray) {
-
-          if (c == '{' || c == '(' || c == '[') {
-            switch (c) {
-              case '{':
-                stack.push('}');
-                break;
-              case '(':
-                stack.push(')');
-                break;
-              case '[':
-                stack.push(']');
-                break;
-            }
-          } else if (stack.isEmpty() || (!stack.isEmpty() && stack.pop() != c)) {
-            result = false;
-            break;
+  /**
+   * Returns true when every bracket is closed by the same type, in the right order.
+   */
+  public static boolean isBalanced(String input) {
+    Stack<Character> stack = new Stack<>();
+    for (char c : input.toCharArray()) {
+      switch (c) {
+        case '{':
+          stack.push('}');
+          break;
+        case '(':
+          stack.push(')');
+          break;
+        case '[':
+          stack.push(']');
+          break;
+        default:
+          if (stack.isEmpty() || stack.pop() != c) {
+            return false;
           }
-        }
       }
-
-      if (stack.isEmpty() && result) {
-        System.out.println("true");
-      } else {
-        System.out.println("false");
-      }
-      ;
     }
+    return stack.isEmpty();
   }
 
 }
