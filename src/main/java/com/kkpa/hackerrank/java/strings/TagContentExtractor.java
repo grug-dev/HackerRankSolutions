@@ -4,41 +4,27 @@ package com.kkpa.hackerrank.java.strings;
  * https://www.hackerrank.com/challenges/tag-content-extractor/problem?isFullScreen=true
  */
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TagContentExtractor {
 
-  public final static String NONE = "None";
+  // Same opening and closing tag name (\1), and content with no other tag inside.
+  private static final Pattern VALID_TAG = Pattern.compile("<(.+)>([^<]+)</\\1>");
 
-  public String extract(String word) {
-
-    Pattern p = Pattern.compile("<(.+)>([^<]+)</\\1>");
-    Matcher m = p.matcher(word);
-
-    boolean found = false;
-    String codeGroup = null;
+  /**
+   * Returns the content of every valid tag in the line, in order. Empty when there is none
+   * (HackerRank prints "None" in that case).
+   */
+  public List<String> extract(String line) {
+    List<String> contents = new ArrayList<>();
+    Matcher m = VALID_TAG.matcher(line);
     while (m.find()) {
-
-      // get the matching group
-      codeGroup = m.group(2);
-
-      // print the group
-      System.out.format("%s\n", codeGroup);
-      found = true;
-
-
-
+      contents.add(m.group(2));
     }
-
-    if (!found) {
-      System.out.println(NONE);
-      return NONE;
-    }
-
-    return codeGroup;
-
+    return contents;
   }
-
 
 }

@@ -74,7 +74,7 @@ public class SamAndSubstrings {
   private long fn(String value, long modulo) {
     int size = value.length();
     if (size == 0) return size;
-    if (size == 1) return Long.parseLong(value) & modulo;
+    if (size == 1) return Long.parseLong(value) % modulo;
     long sum = 0;
 
 

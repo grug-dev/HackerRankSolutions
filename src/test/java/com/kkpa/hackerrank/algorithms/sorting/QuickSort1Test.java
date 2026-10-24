@@ -1,48 +1,29 @@
-package com.kkpa.hackerrank.algorithms;
+package com.kkpa.hackerrank.algorithms.sorting;
 
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+import java.util.Collections;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * https://www.hackerrank.com/challenges/quicksort1/problem
  */
-@RunWith(Parameterized.class)
 public class QuickSort1Test {
 
-
-  /*
-   * Complete the 'quickSort' function below.
-   *
-   * The function is expected to return an INTEGER_ARRAY.
-   * The function accepts INTEGER_ARRAY arr as parameter.
-   */
-
-  public static List<Integer> quickSort(List<Integer> arr) {
-    // Write your code here
-    if (arr.size() == 1) {
-      return arr;
-    }
-
-    List<Integer> leftArray = new ArrayList<>();
-    List<Integer> rightArray = new ArrayList<>();
-    int pivot = arr.get(0);
-    for (int i = 0; i < arr.size(); i++) {
-      int value = arr.get(i);
-      if (value < pivot) {
-        leftArray.add(value);
-      } else {
-        rightArray.add(value);
-      }
-    }
-    List<Integer> result = new ArrayList();
-    result.addAll(leftArray);
-    result.addAll(rightArray);
-
-    return result;
+  @Test
+  public void partitionsTheSampleAroundTheFirstElement() {
+    assertEquals(Arrays.asList(3, 2, 4, 5, 7), QuickSort1.quickSort(Arrays.asList(4, 5, 3, 7, 2)));
   }
 
+  @Test
+  public void keepsValuesEqualToThePivotInTheMiddle() {
+    assertEquals(Arrays.asList(1, 5, 5, 5, 9), QuickSort1.quickSort(Arrays.asList(5, 5, 1, 9, 5)));
+  }
 
+  @Test
+  public void returnsASingleElementAsIs() {
+    assertEquals(Collections.singletonList(42), QuickSort1.quickSort(Collections.singletonList(42)));
+  }
 }
