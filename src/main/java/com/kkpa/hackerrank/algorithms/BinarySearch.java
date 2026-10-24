@@ -1,7 +1,5 @@
 package com.kkpa.hackerrank.algorithms;
 
-import java.util.Arrays;
-
 /**
  * Binary search over a sorted int array.
  * The array must be sorted in ascending order.
@@ -13,6 +11,7 @@ public class BinarySearch {
    * Finds the position of {@code key} in {@code arr}.
    *
    * @param arr sorted array (ascending). It can be empty. If it is not sorted, the result is undefined.
+   *            The method does not change the array.
    * @param key the value to find
    * @return an index {@code i} where {@code arr[i] == key}, or {@code -1} if the key is not in the array.
    * With duplicates, any matching index is valid.
@@ -23,8 +22,6 @@ public class BinarySearch {
     if (arr.length == 1) {
       return (arr[0] == key) ? 0 : -1;
     }
-
-   Arrays.sort(arr);
 
    int low = 0;
    int high = arr.length - 1;

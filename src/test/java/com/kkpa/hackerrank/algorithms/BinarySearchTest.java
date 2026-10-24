@@ -3,6 +3,7 @@ package com.kkpa.hackerrank.algorithms;
 import org.junit.Test;
 
 import static com.kkpa.hackerrank.algorithms.BinarySearch.binarySearch;
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class BinarySearchTest {
@@ -87,20 +88,12 @@ public class BinarySearchTest {
     assertEquals(2, arr[index]);
   }
 
-  /*
-   * The method sorts the input first, so the expected index is the position in the SORTED array,
-   * not in the original one.
-   */
   @Test
-  public void unsortedArrayFindsKeyAtItsSortedPosition() {
-    // {5, 1, 3} sorted is {1, 3, 5}: the 5 is at index 2.
-    assertEquals(2, binarySearch(new int[]{5, 1, 3}, 5));
-  }
-
-  @Test
-  public void descendingArrayFindsKeyAtItsSortedPosition() {
-    // {50, 40, 30, 20, 10} sorted is {10, 20, 30, 40, 50}: the 50 is at index 4.
-    assertEquals(4, binarySearch(new int[]{50, 40, 30, 20, 10}, 50));
+  public void doesNotChangeTheInputArray() {
+    // The caller must sort the array. The method only reads it.
+    int[] arr = {5, 1, 3};
+    binarySearch(arr, 5);
+    assertArrayEquals(new int[]{5, 1, 3}, arr);
   }
 
   @Test
