@@ -62,8 +62,7 @@ class Priorities {
         int id = Integer.parseInt(args[3]);
         priorityQueue.offer(new Student(id, name, cgpt));
       } else {
-        Student student = priorityQueue.poll();
-        System.out.println("Student removed " + student.getName());
+        priorityQueue.poll();
       }
     }
     while (!priorityQueue.isEmpty()) {

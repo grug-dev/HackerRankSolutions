@@ -27,7 +27,6 @@ public class TagContentExtractor {
       System.out.format("%s\n", codeGroup);
       found = true;
 
-      //  return codeGroup;
 
 
     }

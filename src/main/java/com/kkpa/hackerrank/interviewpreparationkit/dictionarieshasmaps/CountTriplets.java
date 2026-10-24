@@ -23,7 +23,6 @@ public class CountTriplets {
         int idxFound = findNextIdx(nextIndex, (commonRatio * initial), arr);
         if (idxFound != -1) {
           stack.add(idxFound);
-          //idxFound = arr.indexOf(commonRatio * initial * commonRatio);
           idxFound = findNextIdx(idxFound, commonRatio * initial * commonRatio, arr);
           if (idxFound != -1) {
             stack.add(idxFound);
